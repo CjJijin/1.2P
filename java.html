@@ -1,43 +1,116 @@
-<script>
-    // JavaScript String Methods Example
-    var inputString = "Hello, World!";
-    var stringOutputElement = document.createElement("p");
-    stringOutputElement.textContent = "Original String: " + inputString;
-    stringOutputElement.innerHTML += "<br>Uppercase: " + inputString.toUpperCase();
-    stringOutputElement.innerHTML += "<br>Length: " + inputString.length;
-    document.body.appendChild(stringOutputElement);
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JavaScript Concepts</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+        }
 
-    // JavaScript Number Methods Example
-    var inputNumber = 42;
-    var numberOutputElement = document.createElement("p");
-    numberOutputElement.textContent = "Original Number: " + inputNumber;
-    numberOutputElement.innerHTML += "<br>Rounded: " + Math.round(inputNumber);
-    numberOutputElement.innerHTML += "<br>Square Root: " + Math.sqrt(inputNumber);
-    document.body.appendChild(numberOutputElement);
+        header {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+        }
 
-    // JavaScript Array Methods Example
-    var inputArray = [1, 2, 3, 4, 5];
-    var arrayOutputElement = document.createElement("p");
-    arrayOutputElement.textContent = "Original Array: " + inputArray;
-    arrayOutputElement.innerHTML += "<br>Joined as String: " + inputArray.join(", ");
-    arrayOutputElement.innerHTML += "<br>Reversed: " + inputArray.reverse();
-    document.body.appendChild(arrayOutputElement);
+        h1 {
+            font-size: 36px;
+        }
 
-    // JavaScript Date Methods Example
-    var currentDate = new Date();
-    var dateOutputElement = document.createElement("p");
-    dateOutputElement.textContent = "Current Date: " + currentDate;
-    dateOutputElement.innerHTML += "<br>Year: " + currentDate.getFullYear();
-    dateOutputElement.innerHTML += "<br>Month: " + (currentDate.getMonth() + 1);
-    document.body.appendChild(dateOutputElement);
+        main {
+            max-width: 800px;
+            margin: 20px auto;
+            background-color: #fff;
+            padding: 20px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
 
-    // JavaScript Function Example
-    function greet(name) {
-        return "Hello, " + name + "!";
-    }
+        p {
+            font-size: 16px;
+            margin-bottom: 10px;
+        }
 
-    var functionOutputElement = document.createElement("p");
-    var greeting = greet("John");
-    functionOutputElement.textContent = greeting;
-    document.body.appendChild(functionOutputElement);
-</script>
+        .code {
+            background-color: #f9f9f9;
+            border: 1px solid #ddd;
+            padding: 10px;
+            font-family: 'Courier New', monospace;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Exploring JavaScript Concepts</h1>
+    </header>
+    <main>
+        <section>
+            <h2>String Methods</h2>
+            <div class="code" id="stringMethods">
+                <p>// String methods</p>
+            </div>
+            <script>
+                const str = 'JavaScript Concepts';
+                document.querySelector('#stringMethods').innerHTML +=
+                    "<p>Length: " + str.length + "</p>" +
+                    "<p>Uppercase: " + str.toUpperCase() + "</p>" +
+                    "<p>Substring: " + str.substring(0, 10) + "</p>" +
+                    "<p>Replaced: " + str.replace('JavaScript', 'JS') + "</p>";
+            </script>
+        </section>
+
+        <section>
+            <h2>Number Methods</h2>
+            <div class="code" id="numberMethods">
+                <p>// Number methods</p>
+            </div>
+            <script>
+                const num = 42.75;
+                document.querySelector('#numberMethods').innerHTML +=
+                    "<p>Fixed: " + num.toFixed(2) + "</p>" +
+                    "<p>Is integer: " + Number.isInteger(num) + "</p>" +
+                    "<p>Rounded down: " + Math.floor(num) + "</p>";
+            </script>
+        </section>
+
+        <section>
+            <h2>Array Methods</h2>
+            <div class="code" id="arrayMethods">
+                <p>// Array methods</p>
+            </div>
+            <script>
+                const arr = [1, 2, 3, 4, 5];
+                document.querySelector('#arrayMethods').innerHTML +=
+                    "<p>Length: " + arr.length + "</p>" +
+                    "<p>Index of 3: " + arr.indexOf(3) + "</p>" +
+                    "<p>Slice: " + arr.slice(1, 4) + "</p>" +
+                    "<p>Concatenated: " + arr.concat([6, 7, 8]) + "</p>";
+            </script>
+        </section>
+
+        <section>
+            <h2>Date and Function Methods</h2>
+            <div class="code" id="dateFunctionMethods">
+                <p>// Date methods</p>
+            </div>
+            <script>
+                const currentDate = new Date();
+                document.querySelector('#dateFunctionMethods').innerHTML +=
+                    "<p>Current year: " + currentDate.getFullYear() + "</p>" +
+                    "<p>Current month: " + currentDate.getMonth() + "</p>" +
+                    "<p>Current day: " + currentDate.getDate() + "</p>";
+
+                // Function methods
+                function sayHello(name) {
+                    document.querySelector('#dateFunctionMethods').innerHTML += "<p>Hello, " + name + "!</p>";
+                }
+                setTimeout(sayHello, 2000, 'Jijin');
+            </script>
+        </section>
+    </main>
+</body>
+</html>
