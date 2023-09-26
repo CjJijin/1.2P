@@ -59,7 +59,8 @@
                     "<p>Length: " + str.length + "</p>" +
                     "<p>Uppercase: " + str.toUpperCase() + "</p>" +
                     "<p>Substring: " + str.substring(0, 10) + "</p>" +
-                    "<p>Replaced: " + str.replace('JavaScript', 'JS') + "</p>";
+                    "<p>Replaced: " + str.replace('JavaScript', 'JS') + "</p>" +
+                    "<p>Includes 'Concepts': " + str.includes('Concepts') + "</p>"; // Added includes method
             </script>
         </section>
 
@@ -73,7 +74,9 @@
                 document.querySelector('#numberMethods').innerHTML +=
                     "<p>Fixed: " + num.toFixed(2) + "</p>" +
                     "<p>Is integer: " + Number.isInteger(num) + "</p>" +
-                    "<p>Rounded down: " + Math.floor(num) + "</p>";
+                    "<p>Rounded down: " + Math.floor(num) + "</p>" +
+                    "<p>Exponential notation: " + num.toExponential() + "</p>" + // Added toExponential method
+                    "<p>Square root: " + Math.sqrt(num) + "</p>"; // Added sqrt method
             </script>
         </section>
 
@@ -88,7 +91,8 @@
                     "<p>Length: " + arr.length + "</p>" +
                     "<p>Index of 3: " + arr.indexOf(3) + "</p>" +
                     "<p>Slice: " + arr.slice(1, 4) + "</p>" +
-                    "<p>Concatenated: " + arr.concat([6, 7, 8]) + "</p>";
+                    "<p>Concatenated: " + arr.concat([6, 7, 8]) + "</p>" +
+                    "<p>Last element: " + arr[arr.length - 1] + "</p>"; // Added access to the last element
             </script>
         </section>
 
@@ -102,7 +106,9 @@
                 document.querySelector('#dateFunctionMethods').innerHTML +=
                     "<p>Current year: " + currentDate.getFullYear() + "</p>" +
                     "<p>Current month: " + currentDate.getMonth() + "</p>" +
-                    "<p>Current day: " + currentDate.getDate() + "</p>";
+                    "<p>Current day: " + currentDate.getDate() + "</p>" +
+                    "<p>Current time: " + currentDate.toLocaleTimeString() + "</p>" + // Added toLocaleTimeString method
+                    "<p>Current date and time: " + currentDate.toLocaleString() + "</p>"; // Added toLocaleString method
 
                 // Function methods
                 function sayHello(name) {
