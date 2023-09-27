@@ -115,6 +115,14 @@
                     document.querySelector('#dateFunctionMethods').innerHTML += "<p>Hello, " + name + "!</p>";
                 }
                 setTimeout(sayHello, 2000, 'Jijin');
+                
+                //Calculate the square of a number
+                function squareNumber(number) {
+                    return number * number;
+                }
+
+                const squaredResult = squareNumber(5);
+                document.querySelector('#dateFunctionMethods').innerHTML += "<p>Squared Result: " + squaredResult + "</p>";
             </script>
         </section>
     </main>
